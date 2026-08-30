@@ -16,30 +16,38 @@ const PROJECTS = [
   },
 
   {
-    name: "Underwriting Copilot",
-    desc: "Developing an AI-powered underwriting assistant that leverages Retrieval-Augmented Generation (RAG), vector databases, prompt engineering, and LLM orchestration to automate document analysis and assist insurance underwriting workflows.",
+    name: "Temporal Video RAG Engine",
+    desc: "a multi-turn conversational RAG engine that indexes video transcripts into metadata-tracked vector embeddings via ChromaDB, applying strict prompt guardrails in Gemini 3.5 to deliver answers with exact video timestamp links.",
     stack: ["Python", "LangChain", "LLMs", "RAG", "Vector DB", "FastAPI"],
-    link: "#", // to be updated
+    link: "https://github.com/jaeytea/temporal-video-ke", // to be updated
     linkType: "github",
     icon: "🤖",
   },
 
-  {
-    name: "AI Agent Security (Kaggle)",
-    desc: "Built and evaluated defenses against multi-step prompt injection and tool abuse attacks on LLM agents as part of Kaggle's AI Agent Security competition, focusing on secure tool orchestration, attack detection, and robust agent behavior.",
-    stack: ["Python", "LLMs", "Prompt Engineering", "AI Security", "Agents"],
-    link: "#", //tbu
-    linkType: "live",
-    icon: "🛡️",
-  },
+  // {
+  //   name: "AI Agent Security (Kaggle)",
+  //   desc: "Built and evaluated defenses against multi-step prompt injection and tool abuse attacks on LLM agents as part of Kaggle's AI Agent Security competition, focusing on secure tool orchestration, attack detection, and robust agent behavior.",
+  //   stack: ["Python", "LLMs", "Prompt Engineering", "AI Security", "Agents"],
+  //   link: "#", //tbu
+  //   linkType: "live",
+  //   icon: "🛡️",
+  // },
 
   {
     name: "SourceSea",
-    desc: "Developed a full-stack resource management platform with a layered architecture, reusable UI components, centralized error handling, and REST APIs to create a scalable and maintainable application.",
+    desc: "Full-stack web platform that transforms static bookmarks into actionable reminders, leveraging Supabase Google authentication, CRUD-based resource management, and automated notifications to ensure important webpages are never forgotten.",
     stack: ["React", "TypeScript", "Node.js", "Express", "SQLite"],
     link: "https://github.com/jaeytea/sourcesea",
     linkType: "github",
     icon: "⚙️",
+  },
+  {
+    name: "Sserunns",
+    desc: "Ssera runs. Endless runner game with a beautiful console and increasing speed. How long can you help Ssera survive?",
+    stack: ["Typescript", "HTML5 Canvas"],
+    link: "https://jaeytea.github.io/sserunns/", // update
+    linkType: "Live",
+    icon: "💡",
   },
 
   {
@@ -59,14 +67,15 @@ const PROJECTS = [
     linkType: "Live",
     icon: "💡",
   },
-  {
-    name: "Lumé",
-    desc: "A modern journaling application supporting authentication, cloud synchronization, and responsive UI using Supabase as the backend.",
-    stack: ["React", "Supabase", "PostgreSQL", "OAuth"],
-    link: "https://github.com/jaeytea/lume",
-    linkType: "github",
-    icon: "📖",
-  },
+
+  // {
+  //   name: "Lumé",
+  //   desc: "A modern journaling application supporting authentication, cloud synchronization, and responsive UI using Supabase as the backend.",
+  //   stack: ["React", "Supabase", "PostgreSQL", "OAuth"],
+  //   link: "https://github.com/jaeytea/lume",
+  //   linkType: "github",
+  //   icon: "📖",
+  // },
 ];
 
 export default function Projects() {
