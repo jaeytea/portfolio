@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import BinaryRain from "./components/BinaryRain";
 
 export default function App() {
   const [booted, setBooted] = useState(false);
@@ -82,6 +83,7 @@ export default function App() {
         ) : (
           <div className="main-content fade-in">
             <div className="scanline" />
+            <BinaryRain />
             <Hero mode={mode} setMode={setMode} />
             <Tabs />
             <Contact />
