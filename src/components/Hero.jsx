@@ -55,18 +55,19 @@ export default function Hero({ mode, setMode }) {
             <div className="term-line">
               <div className="hero-bio">
                 <p>
-                  Software Engineer with ~2 years of experience building{" "}
-                  <span className="str">backend systems</span>,{" "}
-                  <span className="str">observability pipelines</span>, and{" "}
-                  <span className="str">DevOps infrastructure</span>.
+                  Software Engineer focused on building
+                  <span className="str">backend systems</span>,
+                  <span className="str">production APIs</span>, and
+                  <span className="str">real-world applications</span>.
                   <br />
-                  Currently based in Delhi, India — actively seeking{" "}
-                  <span className="success">backend</span> roles in
-                  Java/Springboot or Python. Open to Remote/Hybrid mode.
+                  Currently based in Delhi, India — looking for
+                  <span className="success">backend</span> roles with
+                  Java/Spring Boot or Python. Open to Remote/Hybrid
+                  opportunities.
                   <br />
-                  <br />
-                  Passionate about distributed systems, container orchestration,
-                  and writing code that's observable by default.
+                  <br />I enjoy solving performance bottlenecks, working with
+                  distributed systems, and figuring out why things break in
+                  production.
                 </p>
               </div>
             </div>
