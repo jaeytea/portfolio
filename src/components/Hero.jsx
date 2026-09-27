@@ -56,16 +56,16 @@ export default function Hero({ mode, setMode }) {
               <div className="hero-bio">
                 <p>
                   Software Engineer focused on building
-                  <span className="str">backend systems</span>,
-                  <span className="str">production APIs</span>, and
-                  <span className="str">real-world applications</span>.
+                  <span className="str"> backend systems</span>,
+                  <span className="str"> production APIs</span>, and
+                  <span className="str"> real-world applications</span>.
                   <br />
                   Currently based in Delhi, India — looking for
-                  <span className="success">backend</span> roles with
+                  <span className="success"> backend</span> roles with
                   Java/Spring Boot or Python. Open to Remote/Hybrid
                   opportunities.
                   <br />
-                  <br />I enjoy solving performance bottlenecks, working with
+                  <br /> I enjoy solving performance bottlenecks, working with
                   distributed systems, and figuring out why things break in
                   production.
                 </p>
@@ -98,7 +98,7 @@ export default function Hero({ mode, setMode }) {
                   rel="noreferrer"
                   className="hero-link"
                 >
-                  <span>⌥</span> linkedin
+                  <span>⌥</span> Linkedin
                 </a>
                 <a href="mailto:jaagritiwork@gmail.com" className="hero-link">
                   <span>@</span> jaagritiwork@gmail.com
@@ -109,7 +109,7 @@ export default function Hero({ mode, setMode }) {
                   rel="noreferrer"
                   className="hero-link"
                 >
-                  <span>↓</span> resume.pdf
+                  <span>↓</span> Resume
                 </a>
               </div>
             </div>
