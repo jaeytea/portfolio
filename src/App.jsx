@@ -9,6 +9,7 @@ import BinaryRain from "./components/BinaryRain";
 
 export default function App() {
   const [booted, setBooted] = useState(false);
+  const [activeTab, setActiveTab] = useState("skills");
   const [command, setCommand] = useState("");
   const [commandError, setCommandError] = useState("");
   const [visitorName, setVisitorName] = useState("");
@@ -218,8 +219,12 @@ export default function App() {
             <div className="main-content fade-in">
               <div className="scanline" />
               <BinaryRain />
-              <Hero mode={mode} setMode={setMode} />
-              <Tabs />
+              <Hero
+                mode={mode}
+                setMode={setMode}
+                setActiveTab={setActiveTab}
+              />
+              <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
               <Contact />
               <Footer />
             </div>

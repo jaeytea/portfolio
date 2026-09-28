@@ -1,6 +1,6 @@
 import ToggleTheme from "./ToggleTheme";
 
-export default function TopBar({ mode, setMode }) {
+export default function TopBar({ mode, setMode, setActiveTab }) {
   return (
     <div className="topbar">
       <div className="topbar-left">
@@ -11,8 +11,12 @@ export default function TopBar({ mode, setMode }) {
       </div>
       <div className="topbar-right">
         <ToggleTheme mode={mode} setMode={setMode} />
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
+        <a href="#skills" onClick={() => setActiveTab("skills")}>
+          SKILLS
+        </a>
+        <a href="#projects" onClick={() => setActiveTab("projects")}>
+          PROJECTS
+        </a>
         <a href="#contact">CONTACT</a>
         <a href="https://github.com/jaeytea" target="_blank" rel="noreferrer">
           GITHUB

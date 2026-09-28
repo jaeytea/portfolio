@@ -1,9 +1,9 @@
 import TopBar from "./TopBar";
 
-export default function Hero({ mode, setMode }) {
+export default function Hero({ mode, setMode, setActiveTab }) {
   return (
     <>
-      <TopBar mode={mode} setMode={setMode} />
+      <TopBar mode={mode} setMode={setMode} setActiveTab={setActiveTab} />
 
       <div className="hero-reveal">
         <section className="hero" id="home">
