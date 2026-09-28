@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 // Faint 0/1 streams drifting UP the screen. Speed picks up while the user scrolls.
 const FONT_PX = 15;
-const COL_WIDTH = 20; // px between columns
+const COL_WIDTH = 2; // px between columns
 const TRAIL_MIN = 15;
 const TRAIL_MAX = 30;
 const BASE_SPEED = 38; // px/sec at rest
@@ -13,7 +13,7 @@ const MAX_ALPHA = 0.22; // keep low so text stays readable
 const rand = (min, max) => min + Math.random() * (max - min);
 const bit = () => (Math.random() < 0.5 ? "0" : "1");
 
-export default function BinaryRain({ density = 0.65 }) {
+export default function BinaryRain({ density = 0.55 }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function BinaryRain({ density = 0.65 }) {
     // re-read whenever the theme class changes.
     const readColor = () =>
       getComputedStyle(document.body).getPropertyValue("--green").trim() ||
-      "#39d353";
+      "#29a43d";
     let color = readColor();
     const themeObserver = new MutationObserver(() => {
       color = readColor();
