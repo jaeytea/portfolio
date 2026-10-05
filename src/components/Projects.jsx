@@ -42,6 +42,22 @@ const PROJECTS = [
     icon: "⚙️",
   },
   {
+    name: "Nihongo Tutor",
+    desc: "a local-first Japanese tutor for my 11-year-old brother that teaches hiragana through Hindi. It checks his pronunciation with faster-whisper, explains mistakes in simple Hindi using Gemma via Ollama behind a code-level guardrail gate, and plays pre-generated ElevenLabs audio, all running offline on a laptop.",
+    stack: [
+      "Python",
+      "FastAPI",
+      "faster-whisper",
+      "Ollama",
+      "Gemma",
+      "JavaScript",
+      "ElevenLabs",
+    ],
+    link: "https://github.com/jaeytea/nihongo-tutor",
+    linkType: "github",
+    icon: "🇯🇵",
+  },
+  {
     name: "Sserunns",
     desc: "Ssera runs. Endless runner game with a beautiful console and increasing speed. How long can you help Ssera survive?",
     stack: ["Typescript", "HTML5 Canvas"],
