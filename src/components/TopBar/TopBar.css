@@ -1,0 +1,50 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+  height: var(--topbar-h);
+  background: var(--bar);
+  border-bottom: var(--line);
+}
+
+.topbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--topbar-h);
+  flex: none;
+  background: var(--paper);
+  border-right: var(--line);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.topbar__nav {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.topbar__nav::-webkit-scrollbar {
+  display: none;
+}
+
+.topbar__link {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topbar__link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.topbar__logo:focus-visible,
+.topbar__link:focus-visible {
+  outline-offset: -4px;
+}

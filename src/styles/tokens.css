@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --font: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+
+  /* strict grayscale */
+  --ink: #000;
+  --paper: #fff;
+  --bar: #c8c8c8;
+  --mid: #444;
+  --faint: #777;
+
+  /* the template's building blocks */
+  --line: 2px solid var(--ink);
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-sm: 2px 2px 0 var(--ink);
+  --dots-image: radial-gradient(rgba(0, 0, 0, 0.28) 1px, transparent 1.2px);
+  --dots-size: 4px 4px;
+
+  /* layout */
+  --container: 1000px;
+  --gutter: 24px;
+  --topbar-h: 44px;
+
+  color-scheme: light;
+}

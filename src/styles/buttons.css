@@ -1,0 +1,41 @@
+/* Shared gray "OS" button: used by Hero, Projects, Contact, Welcome. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 14px;
+  background: var(--bar);
+  color: var(--ink);
+  border: var(--line);
+  border-radius: 0;
+  box-shadow: var(--shadow-sm);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.btn--inverted {
+  background: var(--ink);
+  color: var(--paper);
+}

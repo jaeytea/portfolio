@@ -1,20 +1,13 @@
-const PROJECTS = [
+// linkType: "github" | "live"
+export const PROJECTS = [
   {
     name: "GetMyTix",
     desc: "Designed and built a high-concurrency ticket booking platform using optimistic locking, transactional consistency, and real-time seat state management to prevent overselling under simultaneous booking requests. Includes Flyway migrations, REST APIs, PostgreSQL, and a React frontend.",
-    stack: [
-      "Java 21",
-      "Spring Boot",
-      "React",
-      "PostgreSQL",
-      "Flyway",
-      "Docker",
-    ],
+    stack: ["Java 21", "Spring Boot", "React", "PostgreSQL", "Flyway", "Docker"],
     link: "https://github.com/jaeytea/getmytix",
     linkType: "github",
     icon: "🎟️",
   },
-
   {
     name: "Temporal Video RAG Engine",
     desc: "a multi-turn conversational RAG engine that indexes video transcripts into metadata-tracked vector embeddings via ChromaDB, applying strict prompt guardrails in Gemini 3.5 to deliver answers with exact video timestamp links.",
@@ -23,7 +16,6 @@ const PROJECTS = [
     linkType: "github",
     icon: "🤖",
   },
-
   // {
   //   name: "AI Agent Security (Kaggle)",
   //   desc: "Built and evaluated defenses against multi-step prompt injection and tool abuse attacks on LLM agents as part of Kaggle's AI Agent Security competition, focusing on secure tool orchestration, attack detection, and robust agent behavior.",
@@ -32,7 +24,6 @@ const PROJECTS = [
   //   linkType: "live",
   //   icon: "🛡️",
   // },
-
   {
     name: "SourceSea",
     desc: "Full-stack web platform that transforms static bookmarks into actionable reminders, leveraging Supabase Google authentication, CRUD-based resource management, and automated notifications to ensure important webpages are never forgotten.",
@@ -44,15 +35,7 @@ const PROJECTS = [
   {
     name: "Nihongo Tutor",
     desc: "a local-first Japanese tutor for my 11-year-old brother that teaches hiragana through Hindi. It checks his pronunciation with faster-whisper, explains mistakes in simple Hindi using Gemma via Ollama behind a code-level guardrail gate, and plays pre-generated ElevenLabs audio, all running offline on a laptop.",
-    stack: [
-      "Python",
-      "FastAPI",
-      "faster-whisper",
-      "Ollama",
-      "Gemma",
-      "JavaScript",
-      "ElevenLabs",
-    ],
+    stack: ["Python", "FastAPI", "faster-whisper", "Ollama", "Gemma", "JavaScript", "ElevenLabs"],
     link: "https://github.com/jaeytea/nihongo-tutor",
     linkType: "github",
     icon: "🇯🇵",
@@ -62,10 +45,9 @@ const PROJECTS = [
     desc: "Ssera runs. Endless runner game with a beautiful console and increasing speed. How long can you help Ssera survive?",
     stack: ["Typescript", "HTML5 Canvas"],
     link: "https://jaeytea.github.io/sserunns/", // update
-    linkType: "Live",
+    linkType: "live",
     icon: "💡",
   },
-
   {
     name: "Bolt IoT Temperature Logger",
     desc: "Built an IoT temperature monitoring system using Bolt IoT and an LM35 sensor to collect real-time readings, control logging through a hardware switch, upload sensor data to the cloud, and maintain a local CSV backup.",
@@ -74,16 +56,14 @@ const PROJECTS = [
     linkType: "github",
     icon: "🌡️",
   },
-
   {
     name: "Digital Logic Calculator",
     desc: "Interactive command-line application capable of evaluating Boolean expressions, generating truth tables, and simplifying digital logic for common circuit design problems.",
     stack: ["Java", "CLI", "Boolean Algebra"],
     link: "https://jaeytea.github.io/digi-cal/", // update
-    linkType: "Live",
+    linkType: "live",
     icon: "💡",
   },
-
   // {
   //   name: "Lumé",
   //   desc: "A modern journaling application supporting authentication, cloud synchronization, and responsive UI using Supabase as the backend.",
@@ -93,59 +73,3 @@ const PROJECTS = [
   //   icon: "📖",
   // },
 ];
-
-export default function Projects() {
-  return (
-    <div id="projects">
-      <div className="projects-header">
-        <span style={{ color: "var(--green)" }}>guest@jaeytea:~$</span>
-        &nbsp;
-        <span style={{ color: "var(--cyan)" }}>ls</span>
-        &nbsp;
-        <span style={{ color: "var(--yellow)" }}>-la ./projects/</span>
-        &nbsp;
-        <span style={{ color: "var(--text-muted)" }}>| grep -v "^d"</span>
-      </div>
-
-      <div className="projects-grid">
-        {PROJECTS.map((p) => (
-          <a
-            key={p.name}
-            href={p.link}
-            target="_blank"
-            rel="noreferrer"
-            className="project-card"
-          >
-            <div className="card-top-bar">
-              <div className="card-dot" />
-              <span>~/projects/{p.name}</span>
-            </div>
-
-            <div className="card-body">
-              <div className="card-name">
-                <span className="card-icon">{p.icon}</span>
-                {p.name}
-              </div>
-              <p className="card-desc">{p.desc}</p>
-              <div className="card-stack">
-                {p.stack.map((tech) => (
-                  <span className="stack-tag" key={tech}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="card-footer">
-                <span className="link-icon">
-                  {p.linkType === "github" ? "⌥" : "↗"}
-                </span>
-                <span>
-                  {p.linkType === "github" ? "view on github →" : "live demo →"}
-                </span>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-}

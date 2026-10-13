@@ -1,0 +1,35 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.skills__heading {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.skills__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--paper);
+  border: var(--line);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.skill-chip__icon {
+  filter: grayscale(1) contrast(1.2);
+}

@@ -1,0 +1,90 @@
+/* scroll-linked scale, driven by --hero-scale set in App.jsx */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  scale: var(--hero-scale, 0.9);
+  will-change: opacity, transform;
+  transition:
+    opacity 400ms ease,
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-reveal--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  will-change: auto;
+}
+
+.hero {
+  padding: 72px var(--gutter) 72px;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--container);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.hero__title {
+  margin-bottom: 24px;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.hero__bio {
+  max-width: 34rem;
+}
+
+.hero__bio p + p {
+  margin-top: 12px;
+}
+
+.hero__bio strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero__art {
+  justify-self: center;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding-top: 40px;
+  }
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero__art {
+    max-width: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    scale: 1;
+    will-change: auto;
+    transition: none;
+  }
+}

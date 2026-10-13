@@ -1,4 +1,4 @@
-const SKILLS = [
+export const SKILLS = [
   {
     category: "Languages & Core",
     items: [
@@ -52,7 +52,6 @@ const SKILLS = [
       // { name: "GitHub Actions", icon: "⚙️" },
       { name: "Linux", icon: "🐧" },
       { name: "Bash Scripting", icon: "📜" },
-
       // { name: "AWS", icon: "☁️" },
     ],
   },
@@ -93,37 +92,3 @@ const SKILLS = [
     ],
   },
 ];
-
-export default function Skills() {
-  return (
-    <div>
-      <div className="skills-header">
-        <span className="prompt" style={{ color: "var(--green)" }}>
-          guest@jaeytea:~$
-        </span>
-        &nbsp;
-        <span style={{ color: "var(--cyan)" }}>cat</span>
-        &nbsp;
-        <span style={{ color: "var(--yellow)" }}>skills.json</span>
-        <span style={{ color: "var(--text-muted)" }}> | jq '.'</span>
-      </div>
-
-      {SKILLS.map((cat) => (
-        <div className="skills-category" key={cat.category}>
-          <div className="skills-cat-label">
-            <span style={{ color: "var(--magenta)" }}>#</span>
-            &nbsp;{cat.category}
-          </div>
-          <div className="skills-grid">
-            {cat.items.map((skill) => (
-              <div className="skill-chip" key={skill.name}>
-                <span className="skill-icon">{skill.icon}</span>
-                <span>{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}

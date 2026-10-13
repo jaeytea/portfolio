@@ -1,0 +1,129 @@
+.contact__layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 48px);
+}
+
+.contact__window {
+  flex: 1 1 700px;
+  max-width: 760px;
+  min-width: 0;
+}
+
+.contact__art {
+  display: block;
+  width: min(28vw, 220px);
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact__label {
+  font-weight: 700;
+}
+
+.contact__input {
+  padding: 6px 12px;
+  background: var(--paper);
+  border: var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  font: inherit;
+  resize: vertical;
+}
+
+.contact__input::placeholder {
+  color: var(--faint);
+}
+
+.contact__input:focus {
+  background: var(--bar);
+}
+
+.contact__submit {
+  align-self: flex-start;
+}
+
+.contact__status {
+  min-height: 1.5em;
+  font-size: 0.95rem;
+}
+
+.contact__status--error {
+  padding: 6px 12px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.contact__status--error a {
+  color: inherit;
+}
+
+/* the template's joined "quick links" cells */
+.contact__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 24px;
+  border: var(--line);
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 14px;
+  border-left: var(--line);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact__link:first-child {
+  border-left: 0;
+}
+
+.contact__link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (max-width: 760px) {
+  .contact__layout {
+    flex-direction: column;
+  }
+
+  .contact__window {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .contact__art {
+    width: min(52vw, 220px);
+  }
+}
+
+@media (max-width: 560px) {
+  .contact__links {
+    grid-template-columns: 1fr;
+  }
+  .contact__link {
+    border-left: 0;
+    border-top: var(--line);
+  }
+  .contact__link:first-child {
+    border-top: 0;
+  }
+}

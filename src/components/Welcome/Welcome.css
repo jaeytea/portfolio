@@ -1,0 +1,126 @@
+html.welcome-locked,
+body.welcome-locked {
+  overflow: hidden;
+}
+
+.welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  padding: var(--gutter);
+  background-color: var(--paper);
+  background-image: var(--dots-image);
+  background-size: var(--dots-size);
+  transform: translateY(var(--welcome-lift, 0px));
+  will-change: transform;
+}
+
+.welcome__window {
+  width: 100%;
+  max-width: 720px;
+}
+
+.welcome__prompt {
+  margin-bottom: 8px;
+  color: var(--mid);
+  font-weight: 600;
+}
+
+.welcome__title {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.welcome__instruction {
+  margin-top: 12px;
+  color: var(--mid);
+}
+
+.welcome__command {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 12px;
+  border: var(--line);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.welcome__command label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.welcome__command input {
+  min-width: 0;
+  padding: 6px 10px;
+  background: var(--paper);
+  border: var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  font: inherit;
+}
+
+.welcome__command input::placeholder {
+  color: var(--faint);
+}
+
+.welcome__command input:disabled {
+  background: var(--bar);
+}
+
+.welcome__command .btn {
+  justify-self: end;
+}
+
+.welcome__error {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 2px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .welcome__command {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome__command .btn {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+.welcome__scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transform: translateX(-50%);
+  animation: welcomeScroll 1.8s ease-in-out infinite;
+}
+
+@keyframes welcomeScroll {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 5px);
+  }
+}
