@@ -67,7 +67,7 @@ export default function Contact() {
   return (
     <Section id="contact" title="Contact" dotted>
       <div className="contact__layout">
-        <ContactArt className="contact__art" size={320} />
+        <ContactArt className="contact__art" size={500} />
         {/* <img className="contact__art" src="/contact.png" alt="Contact illustration" /> */}
         <WindowCard title="contact.html" className="contact__window">
           <form className="contact__form" onSubmit={handleSubmit}>
@@ -120,7 +120,6 @@ export default function Contact() {
               />
             </div>
 
-            {/* Honeypot: hidden from people; bots fill it in and Formspree drops the submission. */}
             <input
               name="_gotcha"
               type="text"
@@ -156,6 +155,8 @@ export default function Contact() {
               )}
             </p>
           </form>
+
+          <p>You can also reach out to me on: </p>
 
           <nav className="contact__links" aria-label="Other ways to reach me">
             {QUICK_LINKS.map(({ label, href, external }) => (

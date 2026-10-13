@@ -27,45 +27,61 @@ export default function Hero() {
         <div className="hero__inner">
           <div className="hero__text">
             <h1 className="hero__title">
-              Hello.
+              : Hello,
               <br />
-              I'm Jagriti.
+              I'm Jagriti Tripathi..
             </h1>
-
+            <br />
             <div className="hero__bio">
+              <h4> $ -what-i-do.- ? </h4>
+              <br />
+              {/* im a swe w 2yo total exp developing reliable backend syst */}
               <p>
-                Software Engineer focused on building{" "}
-                <strong>production backend systems</strong>,{" "}
-                <strong>RESTful APIs</strong>, and{" "}
-                <strong>end-to-end features</strong>, and I have also
-                side-quested with <strong>frontend</strong>,{" "}
-                <strong>Generative AI</strong>, and{" "}
-                <strong>DevOps/Observability</strong>.
+                I’m a Software Engineer who likes building things that actually
+                work in production... from{" "}
+                <strong>backend systems and REST APIs</strong> to figuring out
+                why something is slow, broken, or just not working the way it
+                should.
               </p>
-              <p>
-                I like working on features bottom-up from planning → development
-                → deployment, and working through what comes after — performance
-                issues, production bugs, and everything in between.
-              </p>
-              <p>
-                Currently working with <strong>Java / Spring Boot</strong>, with
-                experience across databases, messaging, queues, distributed
-                systems, and observability.
-              </p>
-            </div>
 
-            <div className="hero__links">
-              {LINKS.map(({ label, href, external }) => (
-                <a
-                  key={label}
-                  className="btn"
-                  href={href}
-                  {...(external && { target: "_blank", rel: "noreferrer" })}
-                >
-                  {label}
-                </a>
-              ))}
+              <p>
+                I like owning features end-to-end, from figuring out the
+                approach to development, deployment, and debugging whatever
+                comes after. I’ve also worked across the stack, so I’m
+                comfortable looking beyond just the backend when needed.
+              </p>
+
+              <p>
+                My main stack is <strong>Java / Spring Boot</strong>, with
+                experience in databases, messaging systems, distributed systems,
+                and observability. Lately, I’ve also been exploring{" "}
+                <strong>Python, basic ML and Generative AI</strong> to build
+                things beyond the usual backend stuff.
+              </p>
             </div>
+            <br />
+            <br />
+            <br />
+
+            <nav className="hero__quick-links" aria-label="Quick links">
+              {/* <h2 className="hero__quick-links-title">Quick links</h2> */}
+              <div className="hero__links">
+                {LINKS.map(({ label, href, external }) => (
+                  <a
+                    key={label}
+                    className="hero__link"
+                    href={href}
+                    {...(external && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    {label}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+              </div>
+            </nav>
           </div>
 
           <HeroArt className="hero__art" />

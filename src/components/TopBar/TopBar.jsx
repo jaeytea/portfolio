@@ -1,3 +1,4 @@
+import HeroArt from "../Hero/HeroArt";
 import "./TopBar.css";
 
 const LINKS = [
@@ -12,7 +13,7 @@ export default function TopBar() {
   return (
     <header className="topbar">
       <a className="topbar__logo" href="#home" aria-label="Back to top">
-        JT
+        <HeroArt size="60%" />
       </a>
       <nav className="topbar__nav" aria-label="Primary">
         {LINKS.map(({ label, href, external }) => (

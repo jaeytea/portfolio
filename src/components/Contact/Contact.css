@@ -73,7 +73,6 @@
   color: inherit;
 }
 
-/* the template's joined "quick links" cells */
 .contact__links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
