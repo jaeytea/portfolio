@@ -2,13 +2,15 @@ import HeroArt from "./HeroArt";
 import useScrollReveal from "../../hooks/useScrollReveal";
 import "./Hero.css";
 
-// Put the PDF in your project's /public folder; BASE_URL keeps the path
-// correct when the site is served from a sub-path like /portfolio/.
 const RESUME_URL = `${import.meta.env.BASE_URL}Jagriti_Tripathi_SoftwareEngineer_Resume.pdf`;
 
 const LINKS = [
   { label: "GitHub", href: "https://github.com/jaeytea", external: true },
-  { label: "LinkedIn", href: "https://linkedin.com/in/jaagritiiii", external: true },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/jaagritiiii",
+    external: true,
+  },
   { label: "Email", href: "mailto:jaagritiwork@gmail.com" },
   { label: "Resume", href: RESUME_URL, external: true },
 ];
@@ -42,8 +44,8 @@ export default function Hero() {
               </p>
               <p>
                 I like working on features bottom-up from planning → development
-                → deployment, and working through what comes after —
-                performance issues, production bugs, and everything in between.
+                → deployment, and working through what comes after — performance
+                issues, production bugs, and everything in between.
               </p>
               <p>
                 Currently working with <strong>Java / Spring Boot</strong>, with
